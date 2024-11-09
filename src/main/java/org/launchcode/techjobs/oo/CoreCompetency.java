@@ -5,12 +5,37 @@ import java.util.Objects;
 public class CoreCompetency {
 
     private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     private static int nextId = 1;
     private String value;
+
+    public static int getNextId() {
+        return nextId;
+    }
+
+    public static void setNextId(int nextId) {
+        CoreCompetency.nextId = nextId;
+    }
 
     public CoreCompetency() {
         this.id = nextId;
         nextId++;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public CoreCompetency(String value) {
